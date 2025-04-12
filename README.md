@@ -31,3 +31,38 @@
 4. **使用者互動**  
    - 遊戲透過終端機提示使用者輸入棋子的起始座標與目的座標（例如 `a1`、`b3`），並將這些字串根據 ASCII 編碼轉換為對應的陣列索引，進行後續處理。
    - 若玩家輸入不合法，程式會提示錯誤，並要求重新輸入，確保遊戲狀態正確更新。
+
+# C++ Chess Game
+
+This project is a chess game written in C++ that I developed during my self-learning journey. Through this project, I not only learned how to store the board information in a two-dimensional array, but also explored the implementation of each piece's movement, the conversion between coordinates and ASCII codes, and the handling of special rules (such as castling and pawn promotion).
+
+## Project Overview
+
+In this program, each chess piece is assigned a specific numeric value as shown below (using Unicode characters to display the pieces):
+
+- **White Pieces**:  
+  King: 1, Queen: 2, Rook: 3, Bishop: 4, Knight: 5, Pawn: 6
+
+- **Black Pieces**:  
+  King: 7, Queen: 8, Rook: 9, Bishop: 10, Knight: 11, Pawn: 12
+
+In addition, to facilitate subsequent calculations and display, the board coordinates are represented by converting letters (a ~ h) into corresponding numbers using ASCII properties, so that all board information can be stored in a single two-dimensional array.
+
+## Main Features
+
+1. **Board Setup and Display**  
+   - The board is represented using a two-dimensional integer array called `board`, with each cell pre-assigned a specific piece (or left empty).
+   - The `print_board()` function, together with the `num2chess()` function, converts the numeric values of the pieces into corresponding Unicode characters so that the game interface is displayed in an intuitive way.
+
+2. **Piece Movement Validation**  
+   - Separate functions are implemented for validating the movement of each piece (King, Queen, Rook, Bishop, Knight, and Pawn). These functions not only consider the movement rules specific to the piece but also call the `is_ally()` function to ensure that the target square does not contain a friendly piece.
+   - For example, the King’s move is validated by calculating the differences in rows and columns to confirm it moves only one square; the Queen’s move combines checks for horizontal, vertical, and diagonal movements, with additional obstacles (path) validation.
+
+3. **Special Rule Handling**  
+   - **Pawn Promotion**: When a white pawn reaches the top row or a black pawn reaches the bottom row, it is automatically promoted to a queen.
+   - **Castling**: The program uses global boolean variables to track whether the King or Rook has moved. Coupled with the path clearance check, this ensures that the conditions for castling are properly evaluated and executed.
+
+4. **User Interaction**  
+   - The game prompts the user in the terminal to input the starting and ending coordinates for a move (e.g., `a1`, `b3`), and these strings are converted into corresponding array indices based on ASCII codes for further processing.
+   - If the player's input is invalid, the program displays an error message and asks for re-entry, ensuring that the game state is updated correctly.
+
