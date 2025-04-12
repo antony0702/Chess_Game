@@ -1,0 +1,5 @@
+﻿  Chess.cpp
+C:\Users\anton\OneDrive\桌面\備審資料\多元表現\Chess\Chess\Chess\Chess.cpp(180,1): warning C4715: 'queen': 不是所有控制路徑都傳回值
+C:\Users\anton\OneDrive\桌面\備審資料\多元表現\Chess\Chess\Chess\Chess.cpp(45,1): warning C4715: 'num2chess': 不是所有控制路徑都傳回值
+C:\Users\anton\OneDrive\桌面\備審資料\多元表現\Chess\Chess\Chess\Chess.cpp(376,1): warning C4715: 'pawn2queen': 不是所有控制路徑都傳回值
+  Chess.vcxproj -> C:\Users\anton\OneDrive\桌面\備審資料\多元表現\Chess\Chess\x64\Debug\Chess.exe
